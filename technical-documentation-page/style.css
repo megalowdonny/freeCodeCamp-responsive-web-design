@@ -1,0 +1,48 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --header-size: 32px;
+}
+
+header {
+  font-size: var(--header-size);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.navhead {
+  font-size: 36px;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+.main-section {
+  padding-left: 40px;
+}
+
+#navbar {
+  /* position: sticky; */
+  display: grid;
+  grid-template-rows: 200px 100px;
+  grid-auto-rows: 100px;
+  border-right: 1px solid black;
+}
+
+.nav-link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  padding-left: 40px;
+  font-size: 24px;
+}
+
+#navbar :not(:first-child) {
+  border-top: 1px solid black;
+  display: flex;
+  align-items: center;
+}
