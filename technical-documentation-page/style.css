@@ -8,12 +8,13 @@
   --p-size: 1rem;
   --link-size: 1.6rem;
   --navhead-size: 3rem;
-  --nav-background-color: rgb(199, 199, 199);
-  --main-background-color: rgb(212, 212, 212);
-  --main-font-color: rgb(10, 10, 10);
-  --link-font-color: rgb(15, 0, 26);
+  --secondary-light-color: rgb(199, 199, 199);
+  --main-light-color: rgb(212, 212, 212);
+  --main-dark-color: rgb(10, 10, 10);
+  --secondary-dark-color: rgb(15, 0, 26);
 
-  color: var(--main-font-color);
+  color: var(--main-dark-color);
+  background-color: var(--main-light-color);
 }
 
 header {
@@ -49,7 +50,7 @@ li:before {
   grid-auto-rows: 100px;
   border-right: 1px solid black;
   flex: 1 0 400px;
-  background-color: var(--nav-background-color);
+  background-color: var(--secondary-light-color);
 }
 
 .navhead {
@@ -65,7 +66,7 @@ li:before {
   text-decoration: none;
   font-size: var(--link-size);
   padding: 0 1.5rem;
-  color: var(--link-font-color);
+  color: var(--secondary-dark-color);
 }
 
 #navbar :not(:first-child) {
@@ -78,16 +79,32 @@ li:before {
   border-bottom: 1px solid black;
 }
 
-.main-doc {
-  background-color: var(--main-background-color);
-}
-
 .main-section {
   padding-left: 40px;
-  margin-bottom: 40px;
+  margin: 20px 0;
   flex: 5 0 auto;
 }
 
 .classTitle {
   font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--main-light-color);
+    background-color: var(--main-dark-color);
+  }
+
+  #navbar {
+    background-color: var(--secondary-dark-color);
+    border-color: var(--main-light-color);
+  }
+
+  .nav-link {
+    color: var(--secondary-light-color);
+  }
+
+  #navbar :not(:first-child), #navbar :last-child {
+    border-color: var(--main-light-color);
+  }
 }
