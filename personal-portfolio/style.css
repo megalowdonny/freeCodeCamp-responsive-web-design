@@ -1,5 +1,5 @@
 :root {
-  --main-green: #49f39b;
+  --main-green: #21ac64;
   --main-purple: #8433a1;
   --light-grey: #d5ece0;
   --medium-grey: #646464;
@@ -63,6 +63,10 @@ a {
   color: var(--light-grey);
 }
 
+.project-tile {
+  border: 1px solid black;
+}
+
 #navbar {
   position: fixed;
   width: 100%;
@@ -109,4 +113,23 @@ a {
 
 #projects {
   background-color: var(--main-green);
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--light-grey);
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+#projects-container {
+  width: 60%;
+  margin: 0px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px;
+  grid-auto-rows: 200px;
+  gap: 20px;
 }
