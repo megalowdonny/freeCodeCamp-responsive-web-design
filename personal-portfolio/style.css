@@ -1,5 +1,32 @@
+:root {
+  --main-green: #49f39b;
+  --main-purple: #8433a1;
+  --light-grey: #d5ece0;
+  --medium-grey: #646464;
+  --dark-grey: #252525;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("fonts/Mukta-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("fonts/Mukta-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("fonts/Mukta-ExtraLight.ttf");
+  font-weight: lighter;
+}
+
 :root, body {
   box-sizing: border-box;
+  font-family: "Mukta", "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -21,4 +48,65 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+}
+
+main {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navlink {
+  font-size: 32px;
+  color: var(--light-grey);
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  padding-right: 40px;
+  background-color: var(--main-purple);
+  z-index: 1;
+  /* border-top: 1px solid black; */
+  border-bottom: 1px solid black;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+}
+
+#navbar :last-child {
+  padding-right: 30px;
+}
+
+#welcome-section {
+  height: 100vh;
+  background: linear-gradient(45deg, black, var(--dark-grey));
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#welcome-section h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--light-grey);
+}
+
+#welcome-section p {
+  color: var(--main-purple);
+  font-size: 2.5rem;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+#projects {
+  background-color: var(--main-green);
 }
